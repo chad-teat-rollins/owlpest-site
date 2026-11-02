@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Static, no JavaScript, no third-party resources. Keep it that way. -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src 'self'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="color-scheme" content="light">
+<title>Owl Pest Prevention | Pest Control Since 1921</title>
+<meta name="description" content="Family-owned pest prevention since 1921. Residential, commercial and government pest control in Maryland, Washington DC, Virginia and Pennsylvania. Call (301) 773-0400.">
+<link rel="icon" href="/logo.png">
+<style>
+  :root {
+    --paper: #f6f0e3;
+    --paper-2: #efe6d2;
+    --card: #fffdf8;
+    --ink: #1b1a17;
+    --ink-2: #4a463e;
+    --red: #a01721;
+    --red-dark: #7d1019;
+    --orange: #ff9500;
+    --rule: #1b1a17;
+    --display: Rockwell, "Rockwell Nova", "Roboto Slab", "Clarendon", Georgia, serif;
+    --body: "Segoe UI", system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font: 17px/1.6 var(--body); }
+  a { color: var(--red); }
+  a:focus-visible { outline: 3px solid var(--orange); outline-offset: 3px; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+
+  /* Ink strip */
+  .strip { background: var(--ink); color: var(--paper); font-size: 0.88rem; letter-spacing: 0.02em; }
+  .strip .wrap { display: flex; justify-content: space-between; align-items: center; gap: 12px; min-height: 38px; }
+  .strip a { color: var(--paper); font-weight: 700; text-decoration: none; }
+
+  /* Masthead */
+  .mast { border-bottom: 3px solid var(--rule); }
+  .mast .wrap { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding-top: 18px; padding-bottom: 18px; }
+  .mast img { display: block; width: 260px; height: auto; }
+
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center;
+    padding: 14px 22px; font: 700 1.05rem/1 var(--display); letter-spacing: 0.02em;
+    text-decoration: none; border: 2px solid var(--ink); white-space: nowrap;
+    box-shadow: 4px 4px 0 var(--ink); transition: transform .08s, box-shadow .08s;
+  }
+  .btn:hover { transform: translate(-1px, -1px); box-shadow: 5px 5px 0 var(--ink); }
+  .btn:active { transform: translate(3px, 3px); box-shadow: 1px 1px 0 var(--ink); }
+  .btn-red { background: var(--red); color: #fff; }
+  .btn-paper { background: var(--card); color: var(--ink); }
+
+  /* Hero */
+  .hero { padding: 64px 0 56px; position: relative; }
+  .hero .wrap { display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: center; }
+  .kicker { font: 700 0.85rem/1 var(--body); letter-spacing: 0.14em; text-transform: uppercase; color: var(--red); margin: 0 0 18px; }
+  h1 { font: 700 clamp(2.1rem, 5.4vw, 3.6rem)/1.05 var(--display); letter-spacing: -0.01em; margin: 0 0 20px; max-width: 16ch; }
+  h1 em { font-style: normal; color: var(--red); }
+  .lede { font-size: 1.15rem; color: var(--ink-2); max-width: 54ch; margin: 0 0 30px; }
+  .cta { display: flex; flex-wrap: wrap; gap: 16px; }
+
+  .stamp {
+    width: 190px; height: 190px; border-radius: 50%; flex: none;
+    border: 3px solid var(--red); outline: 2px solid var(--red); outline-offset: -12px;
+    color: var(--red); display: grid; place-content: center; text-align: center;
+    transform: rotate(-9deg); font-family: var(--display);
+  }
+  .stamp b { display: block; font-size: 3rem; line-height: 1; }
+  .stamp span { display: block; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; }
+
+  /* Section heads */
+  .section { padding: 56px 0; border-top: 3px solid var(--rule); }
+  .section-alt { background: var(--paper-2); }
+  h2 { font: 700 clamp(1.6rem, 3.4vw, 2.2rem)/1.15 var(--display); margin: 0 0 8px; }
+  .sub { color: var(--ink-2); margin: 0 0 32px; max-width: 60ch; }
+
+  /* Services */
+  .services { display: grid; grid-template-columns: repeat(3, 1fr); border: 2px solid var(--ink); background: var(--card); }
+  .service { padding: 28px 26px; }
+  .service + .service { border-left: 2px solid var(--ink); }
+  .service h3 { font: 700 1.25rem/1.2 var(--display); margin: 0 0 10px; }
+  .service h3::before { content: ""; display: block; width: 36px; height: 4px; background: var(--red); margin-bottom: 14px; }
+  .service p { margin: 0; color: var(--ink-2); }
+
+  /* Pests */
+  .pests { display: flex; flex-wrap: wrap; gap: 10px; list-style: none; padding: 0; margin: 0; }
+  .pests li { border: 2px solid var(--ink); background: var(--card); padding: 8px 16px; font: 700 1rem/1.2 var(--display); }
+
+  /* Customer note */
+  .note { display: grid; grid-template-columns: auto 1fr; gap: 22px; align-items: start; border: 2px dashed var(--red); background: var(--card); padding: 24px; }
+  .note .tag { background: var(--red); color: #fff; font: 700 0.8rem/1 var(--body); letter-spacing: 0.12em; text-transform: uppercase; padding: 8px 10px; }
+  .note h2 { font-size: 1.35rem; }
+  .note p { margin: 0; color: var(--ink-2); }
+
+  /* Footer */
+  footer { background: var(--ink); color: #d9d3c4; padding: 48px 0 28px; font-size: 0.95rem; }
+  footer h4 { font: 700 1rem/1.2 var(--display); color: #fff; margin: 0 0 12px; letter-spacing: 0.03em; }
+  footer ul { list-style: none; margin: 0; padding: 0; }
+  footer li { margin: 0 0 4px; }
+  footer a { color: #fff; }
+  .cols { display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: 32px; padding-bottom: 32px; border-bottom: 1px solid #3a3731; }
+  .big-phone { font: 700 1.8rem/1.1 var(--display); color: #fff; text-decoration: none; display: inline-block; margin-top: 4px; }
+  .fine { padding-top: 20px; font-size: 0.85rem; color: #a59e8f; }
+
+  @media (max-width: 820px) {
+    .hero .wrap { grid-template-columns: 1fr; }
+    .stamp { display: none; }
+    .services { grid-template-columns: 1fr; }
+    .service + .service { border-left: 0; border-top: 2px solid var(--ink); }
+    .cols { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 560px) {
+    .strip .hide-sm { display: none; }
+    .mast .btn { display: none; }
+    .mast img { width: 220px; }
+    .hero { padding: 36px 0 44px; }
+    .cta .btn { flex: 1 1 100%; }
+    .note { grid-template-columns: 1fr; gap: 12px; }
+    .note .tag { justify-self: start; }
+  }
+</style>
+</head>
+<body>
+
+<div class="strip">
+  <div class="wrap">
+    <span class="hide-sm">Family-owned &middot; Licensed in MD, DC, VA &amp; PA</span>
+    <a href="tel:+13017730400">Call (301) 773-0400</a>
+  </div>
+</div>
+
+<header class="mast">
+  <div class="wrap">
+    <a href="/"><img src="/logo.png" width="1000" height="385" alt="Owl Pest Prevention, since 1921"></a>
+    <a class="btn btn-red" href="tel:+13017730400">(301) 773-0400</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <p class="kicker">Pest prevention for homes, businesses &amp; government</p>
+        <h1>Over 100 years of keeping pests <em>out.</em></h1>
+        <p class="lede">We're rebuilding our website, but our technicians are working as usual. Call us to schedule service, request an estimate, or ask about your account.</p>
+        <div class="cta">
+          <a class="btn btn-red" href="tel:+13017730400">Call (301) 773-0400</a>
+          <a class="btn btn-paper" href="mailto:info@owlpest.com?subject=Estimate%20request">Request an estimate</a>
+        </div>
+      </div>
+      <div class="stamp" aria-hidden="true">
+        <span>Since</span>
+        <b>1921</b>
+        <span>Family owned</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="wrap">
+      <h2>What we do</h2>
+      <p class="sub">We'll partner with you to take care of every pest issue, from one apartment to an entire facility.</p>
+      <div class="services">
+        <div class="service">
+          <h3>Commercial &amp; government</h3>
+          <p>Property management, apartments, hospitality, retail, healthcare, warehouses, offices and government facilities of every size.</p>
+        </div>
+        <div class="service">
+          <h3>Home &amp; residential</h3>
+          <p>Prevention and removal for ants, roaches, rodents, fleas, ticks, termites, spiders, wasps and the rest, so your home stays pest-free.</p>
+        </div>
+        <div class="service">
+          <h3>Bed bugs</h3>
+          <p>Canine and conventional inspections, followed by effective, environmentally conscious treatment to clear an infestation and keep it gone.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <h2>Pests we handle most</h2>
+      <p class="sub">Just about anything you can imagine, but these are the ones we see every week.</p>
+      <ul class="pests">
+        <li>Ants</li>
+        <li>Rats &amp; mice</li>
+        <li>Cockroaches</li>
+        <li>Termites</li>
+        <li>Bed bugs</li>
+        <li>Fleas &amp; ticks</li>
+        <li>Spiders</li>
+        <li>Bees &amp; wasps</li>
+        <li>Birds</li>
+        <li>Occasional invaders</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="wrap">
+      <div class="note">
+        <span class="tag">Customers</span>
+        <div>
+          <h2>Need a prep letter or product label?</h2>
+          <p>Treatment prep instructions and SDS / product labels will be back online soon. Until then, call <a href="tel:+13017730400">(301) 773-0400</a> or email <a href="mailto:info@owlpest.com">info@owlpest.com</a> and we'll send you what you need. Your scheduled service isn't affected.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <h4>Owl Pest Prevention</h4>
+        <p style="margin:0 0 6px">Highly qualified, time-served professional pest prevention.</p>
+        <a class="big-phone" href="tel:+13017730400">(301) 773-0400</a><br>
+        <a href="mailto:info@owlpest.com">info@owlpest.com</a>
+      </div>
+      <div>
+        <h4>State licenses</h4>
+        <ul>
+          <li>District of Columbia &ndash; #10206</li>
+          <li>Maryland &ndash; MDA #92</li>
+          <li>Pennsylvania &ndash; #BU12713</li>
+          <li>Virginia &ndash; #91000363</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Emergency numbers</h4>
+        <ul>
+          <li>National Poison Control<br><a href="tel:+18002221222">1-800-222-1222</a></li>
+          <li>ChemTrec (chemical spills)<br><a href="tel:+18004249300">800-424-9300</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="fine">&copy; 2012&ndash;2026 Owl Pest Prevention LLC</div>
+  </div>
+</footer>
+
+</body>
+</html>
